@@ -1,0 +1,10 @@
+services:
+  jenkins:
+    image: jenkinsci/jenkins
+    ports:
+      - "8080:8080"
+    If you need to mount a volume for Jenkins data, uncomment the following lines:
+    volumes:
+      - jenkins_data:/var/jenkins_home
+volumes:
+  jenkins_data:./jenkins_data
